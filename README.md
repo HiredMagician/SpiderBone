@@ -189,12 +189,18 @@ you need understand few thing befor you get start:
 <br></br>
 >3: write the each way dict:
 <br></br>
->the normaly ways structure is at below,for each way,first you need is set action('climb_up' or 'grab_down'),and you need set way dict(the path to do action),from top to bottom one tag by one tag to close you target(url for next step or things you want grab)
+>the normaly ways structure is at below;
+<br></br>
+for each way,at first,you need chose the way name and set action('climb_up' or 'grab_down'),then you need set the way dict(the path to do action),from top to bottom one tag by one tag to close you target(url for next step or things you want grab)
+<br></br>
+need pay attention to is: if you want climb each same child tag of his father tag,what you only need is add the _'many':'true'_ in that child tag's dict
+<br></br>
+### And for more function please read the  
 ```
 ways = (
 	#step one 
 	{
-		#below is way name:(way dict)
+		#below is way name:(way tuple)
 		'one':
 		(
 			'climb_up',	#get url for step two
