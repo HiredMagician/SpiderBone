@@ -101,7 +101,7 @@ class exp:
 		self.c = 0
 		time = 1
 		url = 'https://77nali.com/dongtaitu'
-		way = (
+		ways = (
 			{
 				'one':
 				(
@@ -138,7 +138,7 @@ class exp:
 				)
 			}
 		)
-		GoClimb(url = url,way = way,my_self = self,headers = headers,time = time).let_it_go()
+		GoClimb(url = url,ways = ways,my_self = self,headers = headers,time = time).let_it_go()
 		
 	def save_data(self,content):
 		name = str(self.c) + '.jpg'
@@ -182,14 +182,19 @@ Three —— Solution
 you need understand few thing befor you get start:
 >1: the url you give must be completely whit _http://_ or _https://_
 <br></br>
->2: the structure of the way you set:
->>each step is corresponding one html page,for example is your url set "https://www.google.com/", then step one is work on that main html page, step two is work on every page that is you Follow-up at inner main page's url, step three is same principle. all tree structure is start at one root
+>2: the structure of the ways you set:
+<br></br>
+>each step is corresponding one html page,for example is your url set "https://www.google.com/", then step one is work on that root html page, step two is work on every page that is you Follow-up at inner root page's url, step three is same principle. all tree structure is start at one root
 ![three](https://github.com/HiredMagician/SpiderBone/raw/master/three.png)
+<br></br>
+>3: write the each way dict:
+<br></br>
+>the normaly ways structure is at below,for each way,first you need is set action('climb_up' or 'grab_down'),and you need set way dict(the path to do action),from top to bottom one tag by one tag to close you target(url for next step or things you want grab)
 ```
-way = (
+ways = (
 	#step one 
 	{
-		#below is way's name:path dict
+		#below is way name:(way dict)
 		'one':
 		(
 			'climb_up',	#get url for step two
