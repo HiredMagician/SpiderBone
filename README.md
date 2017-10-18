@@ -2,6 +2,7 @@
 ====================================================================================================
 #author by ———— *HiredMagician*
 ---------------------------------------------------------------------------------------------------
+#### _need module: BeautifulSoup, requests_
 ### usually the web spider look like:
 ```
 	import requests
@@ -152,7 +153,9 @@ if __name__ == '__main__':
 	exp()
 ```
 ***
-you may ask: what happen? where is code? or even what a hell?
+if I tell you too code they do same thing 
+<br></br>
+you may say: what happen? where is code? or even what a hell?
 <br></br>
 give me a breath,let me explain^_^
 ***
@@ -239,4 +242,5 @@ ways = (
 	}
 )
 ```
+## __have good time^_^__
 
