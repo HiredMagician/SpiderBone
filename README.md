@@ -152,7 +152,7 @@ if __name__ == '__main__':
 	exp()
 ```
 ***
-you may ask:what happen?where is code?or even what a hell?
+you may ask: what happen? where is code? or even what a hell?
 <br></br>
 give me a breath,let me explain^_^
 ***
@@ -176,6 +176,56 @@ Two —— Question
 Three —— Solution
 >according to the climb way you set SpiderBone can automatically create the code to find the way to climb up or grab down by use `eval()`
 <br></br>
+>2:
 >which mean we nearly only need step 1,2 and finish,no more code,no more time to waste,only left the beautiful code and things we want
 ***
-you need understand few thing befor you get start
+you need understand few thing befor you get start:
+>1: the url you give must be completely whit _http://_ or _https://_
+<br></br>
+>2: the structure of the way you set:
+>>each step is corresponding one html page,for example is your url set "https://www.google.com/", then step one is work on that main html page, step two is work on every page that is you Follow-up at inner main page's url, step three is same principle. all tree structure is start at one root
+![three](https://github.com/HiredMagician/SpiderBone/raw/master/three.png)
+```
+way = (
+	#step one 
+	{
+		#below is way's name:path dict
+		'one':
+		(
+			'climb_up',	#get url for step two
+			{'tag':'div','attr':'class','value':'content'},	
+			{'tag':'article','many':'true'},
+			{'tag':'a'},
+			{'get':'attr','name':'href'}
+		)
+	},
+	#step two
+	{	
+		'one~one':#one way follow above one way
+		(
+			'grab_down',	#grab content from the page we get
+			{'tag':'article','attr':'class','value':'article-content'},	
+			{'tag':'img','many':'true'},
+			{'get':'attr','name':'src','type':'img'}
+		),
+		'one~two':
+		(
+			'climb_up',
+			{'tag':'div','attr':'class','value':'article-paging'},
+			{'tag':'a','many':'true'},
+			{'get':'attr','name':'href'}
+		)
+	},
+	#step three
+	{
+		'one~two~one':
+		(
+			'grab_down',
+			{'tag':'article','attr':'class','value':'article-content'},
+			{'tag':'img'},
+			{'get':'attr','name':'src','type':'img'}
+		)
+	}
+)
+```
+
