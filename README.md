@@ -150,7 +150,7 @@ if __name__ == '__main__':
 	exp()
 ```
 ***
-if I tell you too code they do same thing 
+if I tell you two code they do same thing 
 <br></br>
 you may say: what happen? where is code? or even what a hell?
 <br></br>
@@ -239,5 +239,5 @@ ways = (
 	}
 )
 ```
-### And for more information please read the [manual](https://github.com/HiredMagician/SpiderBone/raw/master/manual.md)
+### And for more information please read the [manual](https://github.com/HiredMagician/SpiderBone/blob/master/manual.md)
 ## __have good time^_^__
