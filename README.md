@@ -118,14 +118,14 @@ class exp:
 				(
 					'grab_down',
 					{'tag':'article','attr':'class','value':'article-content'},
-					{'tag':'img','many':'true'},
+					{'tag':'img'},
 					{'get':'attr','name':'src','type':'img'}
 				),
 				'one~two':
 				(
 					'climb_up',
 					{'tag':'div','attr':'class','value':'article-paging'},
-					{'tag':'a','many':'true'},
+					{'tag':'a'},
 					{'get':'attr','name':'href'}
 				)
 			},
@@ -196,7 +196,7 @@ you need understand few thing befor you get start:
 <br></br>
 for each way,at first,you need chose the way name and set action('climb_up' or 'grab_down'),then you need set the way dict(the path to do action),from top to bottom one tag by one tag to close you target(url for next step or things you want grab)
 <br></br>
-need pay attention to is: if you want climb each same child tag of his father tag,what you only need is add the _'many':'true'_ in that child tag's dict
+need pay attention to is the: if you want climb each same child tag of his father tag,what you only need is add the `'many':'true'` in that child tag's dict,if you not add,the SpiderBone will automatically get all last tag which in dict you set 
 <br></br>
 ### And for more function please read the  
 ```
@@ -219,14 +219,14 @@ ways = (
 		(
 			'grab_down',	#grab content from the page we get
 			{'tag':'article','attr':'class','value':'article-content'},	
-			{'tag':'img','many':'true'},
+			{'tag':'img'},
 			{'get':'attr','name':'src','type':'img'}
 		),
 		'one~two':
 		(
 			'climb_up',
 			{'tag':'div','attr':'class','value':'article-paging'},
-			{'tag':'a','many':'true'},
+			{'tag':'a'},
 			{'get':'attr','name':'href'}
 		)
 	},
