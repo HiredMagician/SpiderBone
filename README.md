@@ -3,7 +3,7 @@
 #author by ———— *HiredMagician*
 ---------------------------------------------------------------------------------------------------
 #### _need module: BeautifulSoup, requests_
-### usually the web spider look like:
+### usually the web spider look like this:
 ```
 	import requests
 	import time
@@ -93,14 +93,12 @@
 	if __name__=='__main__':
 		EggsClimber().GoGet()
 ```
-### _but_ when it use the _SpiderBone_ it look this:
+### _but_ when it use the _SpiderBone_ it look like this:
 ```
 from SpiderBone import GoClimb
-
 class exp:
 	def __init__(self):
 		self.c = 0
-		time = 1
 		url = 'https://77nali.com/dongtaitu'
 		ways = (
 			{
@@ -139,12 +137,11 @@ class exp:
 				)
 			}
 		)
-		GoClimb(url = url,ways = ways,my_self = self,headers = headers,time = time).let_it_go()
+		GoClimb(url = url,ways = ways,my_self = self).let_it_go()
 		
 	def save_data(self,content):
-		name = str(self.c) + '.jpg'
 		self.c = self.c + 1
-		path = r"E:\test" + '\\' + name
+		path = r"E:\test" + '\\' + str(self.c) + '.jpg'
 		with open(path,'wb+') as f:
 			f.write(content)
 		print('gif:%s done' % name)
@@ -198,7 +195,7 @@ for each way,at first,you need chose the way name and set action('climb_up' or '
 <br></br>
 need pay attention to is the: if you want climb each same child tag of his father tag,what you only need is add the `'many':'true'` in that child tag's dict,if you not add,the SpiderBone will automatically get all last tag which in dict you set 
 <br></br>
-### And for more function please read the  
+>now you can release you own web spider by use: `GoClimb(url = url,ways = ways,my_self = self).let_it_go()`
 ```
 ways = (
 	#step one 
@@ -242,5 +239,5 @@ ways = (
 	}
 )
 ```
+### And for more information please read the [manual](https://github.com/HiredMagician/SpiderBone/raw/master/manual.md)
 ## __have good time^_^__
-
