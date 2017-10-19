@@ -46,7 +46,7 @@ ways = (
 	}
 )
 ```
-in each way, first element is the action `'grab_down'` or `'climb_up'`;
+the way's name use `'~'` to connect,child way's nmae need include his father way's name! in each way, first element is the action `'grab_down'` or `'climb_up'`;
 ***
 then you can use key `'tag'`,`'attr'`,`'value'`,`'many'` in middle dict,only thing must need is `tag`:
 >need pay attention to is the: if you want climb each same child tag of his father tag,what you only need is add the `'many':'true'` in that child tag's dict,if you not add,the SpiderBone will automatically get all last tag which in dict you set
