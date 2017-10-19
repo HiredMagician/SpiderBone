@@ -146,12 +146,12 @@ def finish(self):
 ```
 let we see the only useful function you called at SpiderBone:
 ```
-	def let_it_go(self):
-		print('let_it_go')
-		self.climb_up(self.url,1,'main')
-		try:
-			self.my_self.finish()
-		except:
-			pass
+def let_it_go(self):
+	print('let_it_go')
+	self.climb_up(self.url,1,'main')
+	try:
+		self.my_self.finish()
+	except:
+		pass
 ```
 so that's clearly right,when the SpiderBone finish, it will be call,but you can ignore it!
