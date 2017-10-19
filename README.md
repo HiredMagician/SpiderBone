@@ -170,7 +170,7 @@ One —— Situation
 ***
 Two —— Question
 >Now as we see all this spider create process,we find out that step 3 is most cost time,and look like every time we programming the web spider is do the same thing——along the way we find and grab the thing we want.
->so qusetion is:
+>so question is:
 >>can we do step 3 automatic?
 ***
 Three —— Solution
