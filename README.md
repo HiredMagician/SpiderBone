@@ -176,8 +176,8 @@ Two —— Question
 Three —— Solution
 >according to the climb way you set SpiderBone can automatically create the code to find the way to climb up or grab down by use `eval()`
 <br></br>
->2:
->which mean we nearly only need step 1,2 and finish,no more code,no more time to waste,only left the beautiful code and things we want
+>which mean we nearly only need step 1,2 and finish,no more code,no more time to waste,only left the beautiful code and things we want!
+I believe,no question need be solve twice,unless is a more brilliant way.
 ***
 you need understand few thing befor you get start:
 >1: the url you give must be completely whit _http://_ or _https://_
