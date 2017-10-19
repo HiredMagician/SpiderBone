@@ -3,6 +3,7 @@
 #author by ———— *HiredMagician*
 ---------------------------------------------------------------------------------------------------
 #### _need module: BeautifulSoup, requests_
+### install: `pip install SpiderBone`
 ### usually the web spider look like this:
 ```
 import requests
