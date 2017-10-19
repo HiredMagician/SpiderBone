@@ -11,7 +11,7 @@ class GoClimb:
 		if not url[len(url) - 1] == '/':
 			url = url + '/'
 		self.url = url
-		self.ways = way
+		self.ways = ways
 		self.my_self = my_self
 		self.all_step = len(self.ways)
 		self.creat_need_list()
