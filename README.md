@@ -239,5 +239,7 @@ ways = (
 	}
 )
 ```
+### if you know how to use it,then basically，the time you create one web spider will not more than 5min!
+### hope my two day can exchange for many pepole's many time^_^
 ### And for more information please read the [manual](https://github.com/HiredMagician/SpiderBone/blob/master/manual.md)
 ## __have good time^_^__
