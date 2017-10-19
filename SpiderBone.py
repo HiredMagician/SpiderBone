@@ -96,7 +96,7 @@ class GoClimb:
 		fun = '.find'
 		branch = self.ways[index]		
 		for key in branch:
-			if way_name == 'main' or way_name in key:
+			if way_name == 'main' or way_name == '~'.join(key.split('~')[:step]):
 				branch_child = branch[key]
 				if branch_child[0] == which:
 					branch_child_len = len(branch_child)
